@@ -53,23 +53,26 @@ function activate(context) {
 					const keys = await vscode.window.showInputBox({
 						placeHolder: 'Add key',
 					});
-					// Processs the key to match the object shape
-					let result = {}
-					result[keys] = textSelection.replace("\"", "").replace("\"", "")
-					// Create an empty object with file name if its not present
-					if (data['en']['components'][fileName] === undefined) {
-						data['en']['components'][fileName] = {}
-					}
-					// Add the result to json
-					data['en']['components'][fileName] = _.merge(data['en']['components'][fileName], deepen(result))
-					// Replace selection with key
-					editor.edit(builder => builder.replace(selection, "t(\"" + keys + "\")"))
-					// Write json to Yaml
-					fs.writeFile(file, yaml.dump(data), (err) => {
-						if (err) {
-							console.log(err);
+
+					if (keys !== undefined) {
+						// Processs the key to match the object shape
+						let result = {}
+						result[keys] = textSelection.replace("\"", "").replace("\"", "")
+						// Create an empty object with file name if its not present
+						if (data['en']['components'][fileName] === undefined) {
+							data['en']['components'][fileName] = {}
 						}
-					});
+						// Add the result to json
+						data['en']['components'][fileName] = _.merge(data['en']['components'][fileName], deepen(result))
+						// Replace selection with key
+						editor.edit(builder => builder.replace(selection, "t(\"" + keys + "\")"))
+						// Write json to Yaml
+						fs.writeFile(file, yaml.dump(data), (err) => {
+							if (err) {
+								console.log(err);
+							}
+						});
+					}
 				} else {
 					vscode.window.showInformationMessage("Error: Please configure pupilfirst.translation.path in your settings");
 				}
