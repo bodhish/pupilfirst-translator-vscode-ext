@@ -67,7 +67,7 @@ function activate(context) {
 						// Replace selection with key
 						editor.edit(builder => builder.replace(selection, "t(\"" + keys + "\")"))
 						// Write json to Yaml
-						fs.writeFile(file, yaml.dump(data, { noCompatMode: true, lineWidth: 10000 }), (err) => {
+						fs.writeFile(file, yaml.dump(data, { noCompatMode: true, lineWidth: 10000, sortKeys: true }), (err) => {
 							if (err) {
 								console.log(err);
 							}

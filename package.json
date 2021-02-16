@@ -2,7 +2,7 @@
 	"name": "pupilfirst-translator",
 	"displayName": "pupilfirst-translator",
 	"description": "Experimental plugin to set keys in I18n Yaml file",
-	"version": "0.0.3",
+	"version": "0.0.4",
 	"engines": {
 		"vscode": "^1.53.0"
 	},
