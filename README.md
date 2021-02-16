@@ -1,4 +1,6 @@
-# pupilfirst-translator README
+[![License](https://img.shields.io/badge/license-CC%20BY--SA%204.0-orange)](./LICENSE.md)
+
+# pupilfirst-translator
 
 Experimental plugin to set keys in I18n Yaml file
 
