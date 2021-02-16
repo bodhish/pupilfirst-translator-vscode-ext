@@ -4,9 +4,7 @@ const yaml = require('js-yaml');
 var path = require("path");
 var _ = require('lodash');
 
-// this method is called when your extension is activated
-// your extension is activated the very first time the command is executed
-
+// copied from https://stackoverflow.com/a/7794127/8926926
 function deepen(obj) {
 	const result = {};
 
@@ -29,6 +27,8 @@ function deepen(obj) {
 	return result;
 }
 
+// this method is called when your extension is activated
+// your extension is activated the very first time the command is executed
 /**
  * @param {vscode.ExtensionContext} context
  */
