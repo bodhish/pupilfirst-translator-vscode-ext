@@ -12,7 +12,12 @@
 	"activationEvents": [
 		"onCommand:pupilfirst-translator.translate"
 	],
-	"publisher": "Bodhish Thomas",
+	"publisher": "bodhi",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/bodhish/pupilfirst-translator-vscode-ext.git"
+	},
+	"homepage": "https://github.com/bodhish/pupilfirst-translator-vscode-ext/blob/master/README.md",
 	"icon": "resources/logo.png",
 	"main": "./extension.js",
 	"configuration": {
