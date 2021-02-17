@@ -9,4 +9,9 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 - Initial release
 
 ## [0.0.4]
+
 - Order en.yml alphabetically
+
+## [0.0.6]
+
+- Add a new command to order translations alphabetically

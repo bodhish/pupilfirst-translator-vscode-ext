@@ -84,7 +84,23 @@ function activate(context) {
 		vscode.window.showInformationMessage('Done!');
 	});
 
+	let orderTranslation  = vscode.commands.registerCommand('pupilfirst-translator.reorder', async function () {
+		const file = vscode.workspace.getConfiguration().get('pupilfirst.translation.path');
+		let fileContents = fs.readFileSync(file, 'utf8');
+		if (fileContents !== undefined) {
+			let data = yaml.load(fileContents);
+			fs.writeFile(file, yaml.dump(data, { noCompatMode: true, lineWidth: 10000, sortKeys: true }), (err) => {
+				if (err) {
+					console.log(err);
+				}
+			});
+		} else {
+			vscode.window.showInformationMessage("Error: Please configure pupilfirst.translation.path in your settings");
+		}
+	});
+
 	context.subscriptions.push(disposable);
+	context.subscriptions.push(orderTranslation);
 }
 
 // this method is called when your extension is deactivated

@@ -2,7 +2,7 @@
 	"name": "pupilfirst-translator",
 	"displayName": "pupilfirst-translator",
 	"description": "Experimental plugin to set keys in I18n Yaml file",
-	"version": "0.0.5",
+	"version": "0.0.6",
 	"engines": {
 		"vscode": "^1.53.0"
 	},
@@ -10,7 +10,8 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:pupilfirst-translator.translate"
+		"onCommand:pupilfirst-translator.translate",
+		"onCommand:pupilfirst-translator.reorder"
 	],
 	"publisher": "bodhi",
 	"repository": {
@@ -36,13 +37,21 @@
 			{
 				"command": "pupilfirst-translator.translate",
 				"title": "Pupilfirst Translate"
+			},
+			{
+				"command": "pupilfirst-translator.reorder",
+				"title": "Pupilfirst Order Translations"
 			}
 		],
 		"menus": {
 			"editor/context": [
 				{
 					"command": "pupilfirst-translator.translate",
-					"group": "Pupilfirst Translate"
+					"group": "Pupilfirst"
+				},
+				{
+					"command": "pupilfirst-translator.reorder",
+					"group": "Pupilfirst"
 				}
 			]
 		},
