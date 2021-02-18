@@ -15,3 +15,7 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 ## [0.0.6]
 
 - Add a new command to order translations alphabetically
+
+## [0.0.7]
+
+- set `noCompatMode` to `false` quote 'yes' and 'no' strings
