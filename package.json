@@ -58,8 +58,8 @@
 		"keybindings": [
 			{
 				"command": "pupilfirst-translator.translate",
-				"key": "ctrl+shift+t",
-				"mac": "cmd+shift+t",
+				"key": "ctrl+shift+i",
+				"mac": "cmd+shift+i",
 				"when": "editorTextFocus"
 			}
 		]

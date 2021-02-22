@@ -18,4 +18,8 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## [0.0.7]
 
-- set `noCompatMode` to `false` quote 'yes' and 'no' strings
+- Set `noCompatMode` to `false` quote 'yes' and 'no' strings
+
+## [0.0.8]
+
+- Change keyboard shortcut for translation to `ctrl + shit + i`
