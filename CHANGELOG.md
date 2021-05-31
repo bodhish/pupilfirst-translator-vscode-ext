@@ -23,3 +23,7 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 ## [0.0.8]
 
 - Change keyboard shortcut for translation to `ctrl + shit + i`
+
+## [0.0.9]
+
+- Use double quotes instead of single quotes for non-printable characters

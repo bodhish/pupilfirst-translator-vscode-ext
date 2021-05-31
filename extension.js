@@ -30,7 +30,7 @@ function deepen(obj) {
 function writeToFile(data, filePath) {
   fs.writeFile(
     filePath,
-    yaml.dump(data, { lineWidth: 10000, sortKeys: true }),
+    yaml.dump(data, { lineWidth: 10000, sortKeys: true, quotingType: '"' }),
     (err) => {
       if (err) {
         console.log(err);

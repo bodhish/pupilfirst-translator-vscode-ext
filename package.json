@@ -1,87 +1,87 @@
 {
-	"name": "pupilfirst-translator",
-	"displayName": "pupilfirst-translator",
-	"description": "Experimental plugin to set keys in I18n Yaml file",
-	"version": "0.0.8",
-	"engines": {
-		"vscode": "^1.53.0"
-	},
-	"categories": [
-		"Other"
-	],
-	"activationEvents": [
-		"onCommand:pupilfirst-translator.translate",
-		"onCommand:pupilfirst-translator.reorder"
-	],
-	"publisher": "bodhi",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/bodhish/pupilfirst-translator-vscode-ext.git"
-	},
-	"homepage": "https://github.com/bodhish/pupilfirst-translator-vscode-ext/blob/master/README.md",
-	"icon": "resources/logo.png",
-	"main": "./extension.js",
-	"configuration": {
-		"title": "Pupilfirst",
-		"properties": {
-			"pupilfirst.translation.path": {
-				"scope": "window",
-				"type": "string",
-				"default": "",
-				"description": "Enter the absolute path to your en.yml"
-			}
-		}
-	},
-	"contributes": {
-		"commands": [
-			{
-				"command": "pupilfirst-translator.translate",
-				"title": "Pupilfirst Translate"
-			},
-			{
-				"command": "pupilfirst-translator.reorder",
-				"title": "Pupilfirst Order Translations"
-			}
-		],
-		"menus": {
-			"editor/context": [
-				{
-					"command": "pupilfirst-translator.translate",
-					"group": "Pupilfirst"
-				},
-				{
-					"command": "pupilfirst-translator.reorder",
-					"group": "Pupilfirst"
-				}
-			]
-		},
-		"keybindings": [
-			{
-				"command": "pupilfirst-translator.translate",
-				"key": "ctrl+shift+i",
-				"mac": "cmd+shift+i",
-				"when": "editorTextFocus"
-			}
-		]
-	},
-	"scripts": {
-		"lint": "eslint .",
-		"pretest": "npm run lint",
-		"test": "node ./test/runTest.js"
-	},
-	"devDependencies": {
-		"@types/vscode": "^1.53.0",
-		"@types/glob": "^7.1.3",
-		"@types/mocha": "^8.0.4",
-		"@types/node": "^12.11.7",
-		"eslint": "^7.19.0",
-		"glob": "^7.1.6",
-		"mocha": "^8.2.1",
-		"typescript": "^4.1.3",
-		"vscode-test": "^1.5.0"
-	},
-	"dependencies": {
-		"js-yaml": "^4.0.0",
-		"lodash": "^4.17.20"
-	}
+  "name": "pupilfirst-translator",
+  "displayName": "pupilfirst-translator",
+  "description": "Experimental plugin to set keys in I18n Yaml file",
+  "version": "0.0.9",
+  "engines": {
+    "vscode": "^1.53.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:pupilfirst-translator.translate",
+    "onCommand:pupilfirst-translator.reorder"
+  ],
+  "publisher": "bodhi",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bodhish/pupilfirst-translator-vscode-ext.git"
+  },
+  "homepage": "https://github.com/bodhish/pupilfirst-translator-vscode-ext/blob/master/README.md",
+  "icon": "resources/logo.png",
+  "main": "./extension.js",
+  "configuration": {
+    "title": "Pupilfirst",
+    "properties": {
+      "pupilfirst.translation.path": {
+        "scope": "window",
+        "type": "string",
+        "default": "",
+        "description": "Enter the absolute path to your en.yml"
+      }
+    }
+  },
+  "contributes": {
+    "commands": [
+      {
+        "command": "pupilfirst-translator.translate",
+        "title": "Pupilfirst Translate"
+      },
+      {
+        "command": "pupilfirst-translator.reorder",
+        "title": "Pupilfirst Order Translations"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "pupilfirst-translator.translate",
+          "group": "Pupilfirst"
+        },
+        {
+          "command": "pupilfirst-translator.reorder",
+          "group": "Pupilfirst"
+        }
+      ]
+    },
+    "keybindings": [
+      {
+        "command": "pupilfirst-translator.translate",
+        "key": "ctrl+shift+i",
+        "mac": "cmd+shift+i",
+        "when": "editorTextFocus"
+      }
+    ]
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "node ./test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.53.0",
+    "@types/glob": "^7.1.3",
+    "@types/mocha": "^8.0.4",
+    "@types/node": "^12.11.7",
+    "eslint": "^7.19.0",
+    "glob": "^7.1.6",
+    "mocha": "^8.2.1",
+    "typescript": "^4.1.3",
+    "vscode-test": "^1.5.0"
+  },
+  "dependencies": {
+    "js-yaml": "^4.0.0",
+    "lodash": "^4.17.20"
+  }
 }
